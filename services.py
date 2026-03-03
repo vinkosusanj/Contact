@@ -28,3 +28,10 @@ class ContactService:
     def _save_contacts(self) -> None:
         data = [c.to_dict() for c in self.contacts]
         self.storage.save(data)
+
+    def search_contact(self, name: str) -> Contact | None:
+        for contact in self.contacts:
+            if contact.name.lower() == name.lower():
+                return contact
+        return None
+        
