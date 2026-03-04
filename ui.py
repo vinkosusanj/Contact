@@ -4,7 +4,8 @@ class ConsoleUI:
         print()
         print("1. Add contact")
         print("2. List contacts")
-        print("3. Exit")
+        print("3. Search Contact")
+        print("4. Exit")
 
     def get_input(self, text):
         return input(text)
