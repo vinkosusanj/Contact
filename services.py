@@ -35,4 +35,22 @@ class ContactService:
             if name.lower() in contact.name.lower():
                 matches.append(contact)
         return matches
+
+    def update_contact(self, original_name: str, name: str, phone: str, email: str) -> bool:
+        for contact in self.contacts:
+            if contact.name.lower() == original_name.lower():
+                contact.name = name
+                contact.phone = phone
+                contact.email = email
+                self._save_contacts()
+                return True
+        return False
+
+    def delete_contact(self, name: str) -> bool:
+        for contact in self.contacts:
+            if contact.name.lower() == name.lower():
+                self.contacts.remove(contact)
+                self._save_contacts()
+                return True
+        return False
         
