@@ -1,10 +1,11 @@
-from storage import JSONStorage
+from storage import JSONStorage, SQLiteStorage
 from services import ContactService
 from ui import ConsoleUI
 
 
 def main():
-    storage = JSONStorage()
+    #storage = JSONStorage()
+    storage = SQLiteStorage()  # Uncomment this line to use SQLite instead of JSON
     service = ContactService(storage)
     ui = ConsoleUI()
 

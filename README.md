@@ -79,7 +79,7 @@ This separation improves readability, maintainability, and scalability.
 ## 🔮 Future Improvements
 
 - [x] ~~Add delete/update features~~
-- [ ] Migrate to SQLite database
+- [x] ~~Migrate to SQLite database~~
 - [ ] Add unit tests
 - [ ] Convert to REST API using FastAPI
 
